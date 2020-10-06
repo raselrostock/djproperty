@@ -24,8 +24,10 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'realtors.apps.RealtorsConfig',
-    'listings.apps.ListingsConfig'
+    'listings.apps.ListingsConfig',
+    'contacts.apps.ContatsCofig',
     # Thirdparty App
+    'django.contrib.humanize'
 ]
 
 
