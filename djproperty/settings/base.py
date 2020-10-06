@@ -1,5 +1,6 @@
 import os
 from decouple import config
+from django.contrib.messages import constants as messages
 
 ################################
 ##     BASE CONFIGURATION     ##
@@ -20,7 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed App
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    'accounts.apps.AccountsConfig',
     # Thirdparty App
 ]
 
@@ -96,3 +98,10 @@ WSGI_APPLICATION = 'djproperty.wsgi.application'
 ################################
 ##  REDIRECT CONFIGURATION    ##
 ################################
+
+################################
+##   MESSAGE CONFIGURATION    ##
+################################
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
