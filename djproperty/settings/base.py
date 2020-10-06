@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     # Installed App
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
-    'realtors.apps.RealtorsConfig'
+    'realtors.apps.RealtorsConfig',
+    'listings.apps.ListingsConfig'
     # Thirdparty App
 ]
 
