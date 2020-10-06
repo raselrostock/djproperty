@@ -1,3 +1,4 @@
+from decouple import config
 ###############################
 ##    EMAIL CONFIGURATION    ##
 ###############################

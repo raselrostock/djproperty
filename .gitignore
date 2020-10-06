@@ -17,6 +17,7 @@ venv/
 
 # Databases
 *.sqlite3
+migrations/
 
 # JavaScript
 node_modules/
