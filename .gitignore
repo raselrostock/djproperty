@@ -24,3 +24,8 @@ build/ # Webpack build output
 
 # Django
 .env 
+
+# Assets
+assets/
+static/
+media/
