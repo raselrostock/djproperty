@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'contacts.apps.ContactsConfig',
     # Thirdparty App
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'django.contrib.sitemaps',
 ]
 
 

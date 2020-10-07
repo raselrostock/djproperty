@@ -27,5 +27,12 @@ class Listing(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
+    class Meta:
+        verbose_name = 'Listing'
+        verbose_name_plural = 'Listings'
+
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("listings:listing", kwargs={"listing_id": self.pk})
