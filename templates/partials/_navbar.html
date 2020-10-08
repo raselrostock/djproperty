@@ -19,6 +19,9 @@
           <li {% if 'listings' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
             <a class="nav-link" href="{% url 'listings:listings' %}">Featured Listings</a>
           </li>
+          <li {% if 'realtors' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
+            <a class="nav-link" href="{% url 'realtors:realtor-list' %}">Realtors</a>
+          </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">

@@ -29,13 +29,13 @@ class ListingSitemap(Sitemap):
         return reverse('listings:listing', kwargs={"listing_id": item.pk})
 
 
-# class RealtorSitemap(Sitemap):
-#     changfreq = 'daily'
-#     priority = 0.9
+class RealtorSitemap(Sitemap):
+    changfreq = 'daily'
+    priority = 0.9
 
-#     def items(self):
-#         return Realtor.objects.all().order_by('-hire_date')
+    def items(self):
+        return Realtor.objects.all().order_by('-hire_date')
 
-#     def location(self, item):
-#         # return reverse('realtors:course-detail', args=[item.slug])
-#         return reverse('instructors:instructor-detail', kwargs={"instructor_name": item.username})
+    def location(self, item):
+        # return reverse('realtors:course-detail', args=[item.slug])
+        return reverse('realtors:realtor-detail', kwargs={"realtor_slug": item.slug})

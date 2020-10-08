@@ -14,7 +14,7 @@
         <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
-            <h1 class="display-4">Browse Our Properties</h1>
+            <h1 class="display-4">Browse Our Realtors</h1>
             <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <a href="{% url 'pages:index' %}">
                 <i class="fas fa-home"></i> Home</a>
             </li>
-            <li class="breadcrumb-item active"> Browse Listings</li>
+            <li class="breadcrumb-item active"> Browse Realtors</li>
             </ol>
         </nav>
         </div>
@@ -41,12 +41,20 @@
     <!-- Listings -->
     <section id="listings" class="py-4">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 {% if realtors %}
                 {% for realtor in realtors %}
                     <!-- Listing  -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <a href="{{realtor.get_absolute_url }}" >{{ realtor.slug}}</a>
+                    <div class="col-md-4">
+                        <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
+                        <h4><a href="{{realtor.get_absolute_url }}" >{{ realtor.name }}</a></h4>
+                        <p class="text-success">
+                          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+                        <hr>
+                        <p>
+                          <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+                        <p>
+                          <i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
                     </div>
                 {% endfor %}
                 {% else %}

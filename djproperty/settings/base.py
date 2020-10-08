@@ -101,8 +101,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 WSGI_APPLICATION = 'djproperty.wsgi.application'
 
 ################################
-##  REDIRECT CONFIGURATION    ##
+##  SECURITY CONFIGURATION    ##
 ################################
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SESSION_COOKIE_SECURE = False
 
 ################################
 ##   MESSAGE CONFIGURATION    ##

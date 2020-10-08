@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 
 from django.db import models
 from django.urls import reverse
@@ -14,7 +14,7 @@ class Realtor(models.Model):
     phone = models.CharField(max_length=20)
     email = models.CharField(max_length=50)
     is_som = models.BooleanField(default=False)
-    hire_date = models.DateTimeField(default=datetime.now, blank=True)
+    hire_date = models.DateField(verbose_name='Join Date', default=date.today, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Realtor'

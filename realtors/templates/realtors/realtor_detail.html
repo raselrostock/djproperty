@@ -26,11 +26,15 @@
         <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="{% url 'pages:index' %}">
-                <i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="breadcrumb-item active"> Browse Listings</li>
+                <li class="breadcrumb-item">
+                    <a href="{% url 'pages:index' %}">
+                    <i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{% url 'realtors:realtor-list' %}">
+                    Realtors</a>
+                </li>
+                <li class="breadcrumb-item active"> {{ realtor.name }}</li>
             </ol>
         </nav>
         </div>
@@ -41,12 +45,33 @@
     <!-- Listings -->
     <section id="listings" class="py-4">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 {% if realtor %}
                     <!-- Listing  -->
-                    <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="col-md-4 offset-md-4">
+                        <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
+                        <h4><a href="{{realtor.get_absolute_url }}" >{{ realtor.name }}</a></h4>
+                        <p class="text-success">
+                          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+                        <hr>
+                        <div class="realtor-info">
+                            <div class="realtor-description">
+                                <p>
+                                    {{ realtor.description }}
+                                </p>
+                            </div>
+                            <p>
+                                <i class="fas fa-phone"></i> {{ realtor.phone }}
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope-open"></i> {{ realtor.email }}
+                            </p>
+                            
+                            <p>
+                                <i class="fas fa-calendar"></i> {{ realtor.hire_date }}
+                            </p>
+                        </div>
                         
-                        {{ realtor.name}}
                     </div>
                 {% else %}
                 <div class="col-md-12">
