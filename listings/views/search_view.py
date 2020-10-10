@@ -1,3 +1,7 @@
+from django.shortcuts import render, get_object_or_404
+from listings.models import Listing
+from listings.choices import state_choices, price_choices, bedroom_choices
+
 def search(request):
     qs = Listing.objects.order_by('-list_date')
     if 'keywords' in request.GET:

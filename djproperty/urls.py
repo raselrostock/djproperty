@@ -47,6 +47,6 @@ handler403 = 'djproperty.views.permission_denied'
 handler404 = 'djproperty.views.not_found'
 handler500 = 'djproperty.views.server_error'
 
-if settings.DEBUG == True:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG == True:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

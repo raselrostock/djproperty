@@ -266,9 +266,7 @@ img {
 
 .faq__details--right {
   margin: 0;
-  padding: 0;
-
-  
+  padding: 0;  
 }
 @media (max-width: 991px) {
   #showcase {
